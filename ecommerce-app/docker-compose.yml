@@ -55,12 +55,14 @@ services:
     networks:
       - microservices-networks
 
-    mail-dev:
-      container_name: maildev
-      image: maildev/maildev
-      ports:
-        - "1080:80"
-        - "1025:25"
+  mail-dev:
+    container_name: maildev
+    image: maildev/maildev
+    ports:
+      - "1080:80"
+      - "1025:25"
+    networks:
+      - microservices-networks
 
 networks:
   microservices-networks:
