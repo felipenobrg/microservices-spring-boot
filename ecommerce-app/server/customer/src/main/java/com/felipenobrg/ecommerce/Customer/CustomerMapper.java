@@ -10,10 +10,10 @@ public class CustomerMapper {
             return null;
         }
         return Customer.builder()
-                .firstName(request.getFirstName())
-                .lastName(request.getLastName())
-                .email(request.getEmail())
-                .address(request.getAddress())
+                .firstName(request.firstName())
+                .lastName(request.lastName())
+                .email(request.email())
+                .address(request.address())
                 .build();
     }
 
