@@ -58,4 +58,8 @@ public class CustomerService {
                 .orElse(() -> new CustomerNotFoundException("Customer not found"));
     }
 
+    public void deleteCustomer(String customerId) {
+        repository.deleteById(customerId)
+                .orElseThrow(() -> new CustomerNotFoundException("Customer not found"));
+    }
 }
